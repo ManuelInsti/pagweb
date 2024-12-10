@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Demo de Cervezas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu container">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Logo" class="logo-img">
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#carrito">Carrito (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" class="swiper-section">
+            <div class="swiper myswiper-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/slider1.jpg" alt="Cerveza 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/slider2.jpg" alt="Cerveza 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slider" src="images/slider3.jpg" alt="Cerveza 3">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <!-- Catálogo de cervezas -->
+        <section id="catalogo" class="catalogo container">
+            <h2>Catálogo de Cervezas</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="images/b1.png" alt="Cerveza Rubia">
+                    <h3>Cerveza Rubia</h3>
+                    <p>$50</p>
+                    <button class="add-to-cart" data-id="1" data-name="Cerveza Rubia" data-price="50">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="images/b2.png" alt="Cerveza Negra">
+                    <h3>Cerveza Negra</h3>
+                    <p>$60</p>
+                    <button class="add-to-cart" data-id="2" data-name="Cerveza Negra" data-price="60">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="images/b3.png" alt="Cerveza IPA">
+                    <h3>Cerveza IPA</h3>
+                    <p>$70</p>
+                    <button class="add-to-cart" data-id="3" data-name="Cerveza IPA" data-price="70">Añadir al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="images/b4.png" alt="Cerveza Rubia">
+                    <h3>Cerveza Rubia</h3>
+                    <p>$50</p>
+                    <button class="add-to-cart" data-id="1" data-name="Cerveza Rubia" data-price="50">Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+        <!-- Sistema de carrito -->
+        <section id="carrito" class="carrito container">
+            <h2>Tu Carrito</h2>
+            <div id="carrito-items"></div>
+            <p>Total: $<span id="total">0</span></p>
+        </section>
+    </main>
+    <footer id="contacto" class="container">
+        <p>© 2024 Cervezas Artesanales - Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
